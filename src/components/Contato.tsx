@@ -19,13 +19,49 @@ export const Contato = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log(formData);
+
+    const { name: Nome, email: Email, message: Mensagem } = formData;
+
+    setError(null);
+    setLoading(true);
+
+    try {
+      const response = await fetch(
+        "https://backend-portfolio-gudw.onrender.com/api/mensagem",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ Nome, Email, Mensagem }),
+        }
+      );
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Erro ao enviar a mensagem");
+      }
+
+      setSubmitted(true);
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
+      }
+    } finally {
+      setLoading(false);
+    }
   };
 
-  return (
+  console.log(formData);
+
+
+  return  (
     <section id="contato" className="section-padding bg-secondary/30">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
