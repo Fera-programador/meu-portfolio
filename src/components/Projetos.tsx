@@ -1,6 +1,6 @@
 import { ExternalLink, Github, Folder } from "lucide-react";
 
-interface Project {
+interface Projeto {
   title: string;
   description: string;
   tags: string[];
@@ -8,7 +8,7 @@ interface Project {
   demo?: string;
 }
 
-const projects = [
+const projetos = [
   {
     title: "Portfolio",
     description: "Meu portfólio pessoal desenvolvido com JavaScript para apresentar meus projetos e habilidades.",
@@ -36,9 +36,9 @@ const projects = [
   },
 ];
 
-export const Projects = () => {
+export const Projetos = () => {
   return (
-    <section id="projects" className="section-padding">
+    <section id="projetos" className="section-padding">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <span className="text-primary font-medium text-sm uppercase tracking-wider">
@@ -53,9 +53,9 @@ export const Projects = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {projects.map((project, index) => (
+          {projetos.map((projeto, index) => (
             <article
-              key={project.title}
+              key={projeto.title}
               className="glass-card p-8 hover-lift group"
             >
               <div className="flex items-start justify-between mb-6">
@@ -64,7 +64,7 @@ export const Projects = () => {
                 </div>
                 <div className="flex gap-3">
                   <a
-                    href={project.github}
+                    href={projeto.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-lg hover:bg-secondary transition-colors"
@@ -72,9 +72,9 @@ export const Projects = () => {
                   >
                     <Github className="h-5 w-5" />
                   </a>
-                  {project.demo && (
+                  {projeto.demo && (
                     <a
-                      href={project.demo}
+                      href={projeto.demo}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 rounded-lg hover:bg-secondary transition-colors"
@@ -87,14 +87,14 @@ export const Projects = () => {
               </div>
 
               <h3 className="font-display text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                {project.title}
+                {projeto.title}
               </h3>
               <p className="text-muted-foreground mb-6">
-                {project.description}
+                {projeto.description}
               </p>
 
               <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
+                {projeto.tags.map((tag) => (
                   <span
                     key={tag}
                     className="px-3 py-1 rounded-md bg-secondary/50 text-xs font-medium"

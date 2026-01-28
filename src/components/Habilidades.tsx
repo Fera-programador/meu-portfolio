@@ -1,4 +1,4 @@
-const skills = [
+const Habilidade = [
   { name: "React", level: 95, color: "hsl(var(--primary))" },
   { name: "TypeScript", level: 90, color: "hsl(var(--primary))" },
   { name: "Node.js", level: 85, color: "hsl(var(--accent))" },
@@ -7,14 +7,14 @@ const skills = [
   { name: "PostgreSQL", level: 80, color: "hsl(var(--primary))" },
 ];
 
-const technologies = [
+const tecnologias = [
   "JavaScript", "Python", "Git", "Docker", "AWS", "Firebase",
   "GraphQL", "REST APIs", "MongoDB", "Redis", "Prisma", "Figma"
 ];
 
-export const Skills = () => {
+export const Habilidades = () => {
   return (
-    <section id="skills" className="section-padding bg-secondary/30">
+    <section id="habilidades" className="section-padding bg-secondary/30">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <span className="text-primary font-medium text-sm uppercase tracking-wider">
@@ -30,18 +30,18 @@ export const Skills = () => {
 
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="space-y-6">
-            {skills.map((skill, index) => (
-              <div key={skill.name} className="space-y-2">
+            {Habilidade.map((habilidade, index) => (
+              <div key={habilidade.name} className="space-y-2">
                 <div className="flex justify-between items-center">
-                  <span className="font-medium">{skill.name}</span>
-                  <span className="text-muted-foreground text-sm">{skill.level}%</span>
+                  <span className="font-medium">{habilidade.name}</span>
+                  <span className="text-muted-foreground text-sm">{habilidade.level}%</span>
                 </div>
                 <div className="h-2 rounded-full bg-secondary overflow-hidden">
                   <div
                     className="h-full rounded-full transition-all duration-1000 ease-out"
                     style={{
-                      width: `${skill.level}%`,
-                      background: skill.color,
+                      width: `${habilidade.level}%`,
+                      background: habilidade.color,
                       animationDelay: `${index * 0.1}s`,
                     }}
                   />
@@ -55,7 +55,7 @@ export const Skills = () => {
               Outras Tecnologias
             </h3>
             <div className="flex flex-wrap gap-3">
-              {technologies.map((tech) => (
+              {tecnologias.map((tech) => (
                 <span
                   key={tech}
                   className="px-4 py-2 rounded-lg bg-secondary/50 text-sm font-medium hover:bg-primary/20 hover:text-primary transition-colors cursor-default"

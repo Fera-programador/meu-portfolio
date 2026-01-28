@@ -38,7 +38,7 @@
 
     --radius: 0.75rem;
 
-    /* Custom tokens */
+   /* Tokens Personalizados */
     --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(174 72% 56%) 100%);
     --gradient-hero: linear-gradient(135deg, hsl(210 20% 98%) 0%, hsl(210 30% 94%) 100%);
     --glass-bg: hsla(0, 0%, 100%, 0.8);
@@ -76,7 +76,7 @@
     --input: 217 33% 17%;
     --ring: 217 91% 60%;
 
-    /* Custom tokens dark */
+    /* Tokens Personalizados Dark */
     --gradient-hero: linear-gradient(135deg, hsl(222 47% 6%) 0%, hsl(222 47% 9%) 100%);
     --glass-bg: hsla(222, 47%, 11%, 0.7);
     --glass-border: hsla(217, 91%, 60%, 0.2);

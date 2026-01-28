@@ -18,9 +18,9 @@ const highlights = [
   },
 ];
 
-export const About = () => {
+export const Sobre = () => {
   return (
-    <section id="about" className="section-padding">
+    <section id="sobre" className="section-padding">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <span className="text-primary font-medium text-sm uppercase tracking-wider">

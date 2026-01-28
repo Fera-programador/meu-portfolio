@@ -1,7 +1,7 @@
 import { Mail, MapPin, Phone, Send, Github, Linkedin } from "lucide-react";
 import { useState } from "react";
 
-const contactInfo = [
+const contatoInfo = [
   { icon: Mail, label: "Email", value: "dsdouglas13@gmail.com" },
   { icon: Phone, label: "Telefone", value: "+55 (11) 91427-2665" },
   { icon: MapPin, label: "Localização", value: "São Paulo, Brasil" },
@@ -12,7 +12,7 @@ const socials = [
   { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
 ];
 
-export const Contact = () => {
+export const Contato = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,7 +26,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-secondary/30">
+    <section id="contato" className="section-padding bg-secondary/30">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <span className="text-primary font-medium text-sm uppercase tracking-wider">
@@ -47,7 +47,7 @@ export const Contact = () => {
                 Informações de Contato
               </h3>
               <div className="space-y-6">
-                {contactInfo.map((info) => (
+                {contatoInfo.map((info) => (
                   <div key={info.label} className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                       <info.icon className="h-5 w-5 text-primary" />

@@ -1,12 +1,12 @@
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 
-export const Hero = () => {
+export const Inicio = () => {
   return (
     <section
-      id="home"
+      id="inicio"
       className="min-h-screen flex items-center justify-center section-padding pt-32 relative overflow-hidden"
     >
-      {/* Background decorations */}
+      {/* Decorações de fundo */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" />
         <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-glow" />
@@ -30,14 +30,14 @@ export const Hero = () => {
 
         <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-up-delay-3">
           <a
-            href="#projects"
+            href="#projetos"
             className="px-8 py-4 rounded-xl bg-primary text-primary-foreground font-medium hover-lift inline-flex items-center gap-2"
           >
             Ver Projetos
             <ArrowDown className="h-4 w-4" />
           </a>
           <a
-            href="#contact"
+            href="#contato"
             className="px-8 py-4 rounded-xl gradient-border font-medium hover-lift"
           >
             Entre em Contato
