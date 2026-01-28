@@ -1,4 +1,5 @@
 import { Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -6,9 +7,12 @@ export const Footer = () => {
   return (
     <footer className="py-8 px-4 border-t border-border">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <a href="#home" className="font-display font-bold text-xl gradient-text">
-          {"<Douglas Souza/>"}
-        </a>
+       <Link
+                       to="/"
+                      className="font-display font-bold text-xl gradient-text"
+            >
+                {"<Douglas Souza/>"}
+               </Link>
         
         <p className="text-muted-foreground text-sm flex items-center gap-1">
           © {currentYear} - Feito com{" "}

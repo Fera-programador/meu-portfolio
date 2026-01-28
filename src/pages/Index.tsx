@@ -17,7 +17,6 @@ const Index = () => {
         <Projetos />
         <Contato />
       </main>
-      <Footer />
     </div>
   );
 };
