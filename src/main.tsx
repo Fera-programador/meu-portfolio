@@ -4,10 +4,9 @@ import App from "./App";
 import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <App />
 );
+
 
 // Se você quer começar a medir o desempenho do seu aplicativo, passe uma função
 // para registrar os resultados (por exemplo: reportWebVitals(console.log))

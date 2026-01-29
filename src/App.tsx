@@ -23,10 +23,8 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-
         <div className="min-h-screen bg-background flex flex-col">
           <Header />
-
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<Index />} />
@@ -37,10 +35,8 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
-
           <Footer />
         </div>
-
       </TooltipProvider>
     </QueryClientProvider>
   </BrowserRouter>
