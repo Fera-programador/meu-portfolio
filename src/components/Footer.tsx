@@ -15,9 +15,11 @@ export const Footer = () => {
                </Link>
         
         <p className="text-muted-foreground text-sm flex items-center gap-1">
-          © {currentYear} - Feito com{" "}
-          <Heart className="h-4 w-4 text-red-500 fill-red-500" /> por Douglas
-        </p>
+  © {currentYear} - Feito com{" "}
+  <Heart className="h-4 w-4 text-red-500 fill-red-500" />{" "}
+  e muito ☕ por Douglas.
+</p>
+
       </div>
     </footer>
   );
