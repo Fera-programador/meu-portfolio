@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
 import { motion } from "framer-motion";
 
 export const Inicio = () => {
@@ -71,6 +71,14 @@ export const Inicio = () => {
             className="px-8 py-4 rounded-xl gradient-border font-medium hover-lift"
           >
             Entre em Contato
+          </a>
+          <a
+            href="/curriculo.pdf"
+            download
+            className="px-8 py-4 rounded-xl glass-card font-medium hover-lift inline-flex items-center gap-2"
+          >
+            <Download className="h-4 w-4" />
+            Baixar Currículo
           </a>
         </motion.div>
 
