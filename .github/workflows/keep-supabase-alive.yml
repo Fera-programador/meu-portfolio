@@ -13,6 +13,8 @@ jobs:
         run: |
           URL="https://wdiwtkzxpcqzsolzryzc.supabase.co/functions/v1/ping"
 
+          echo "Chamando: $URL"
+
           STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$URL")
 
           echo "HTTP status: $STATUS"
